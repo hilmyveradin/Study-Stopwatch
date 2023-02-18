@@ -11,6 +11,8 @@
 		014653B529A10C1D00002498 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014653B429A10C1D00002498 /* ContentView.swift */; };
 		014653B729A10C1F00002498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 014653B629A10C1F00002498 /* Assets.xcassets */; };
 		014653BA29A10C1F00002498 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 014653B929A10C1F00002498 /* Preview Assets.xcassets */; };
+		014653C129A1234C00002498 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014653C029A1234C00002498 /* StopwatchView.swift */; };
+		014653C329A1235400002498 /* RecapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014653C229A1235400002498 /* RecapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		014653B429A10C1D00002498 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		014653B629A10C1F00002498 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		014653B929A10C1F00002498 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		014653C029A1234C00002498 /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
+		014653C229A1235400002498 /* RecapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				014653B229A10C1D00002498 /* SudyStopwatchApp.swift */,
 				014653B429A10C1D00002498 /* ContentView.swift */,
+				014653C029A1234C00002498 /* StopwatchView.swift */,
+				014653C229A1235400002498 /* RecapView.swift */,
 				014653B629A10C1F00002498 /* Assets.xcassets */,
 				014653B829A10C1F00002498 /* Preview Content */,
 			);
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014653C329A1235400002498 /* RecapView.swift in Sources */,
 				014653B529A10C1D00002498 /* ContentView.swift in Sources */,
 				014653B329A10C1D00002498 /* SudyStopwatchApp.swift in Sources */,
+				014653C129A1234C00002498 /* StopwatchView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
