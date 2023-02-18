@@ -10,25 +10,26 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            
+
             Spacer()
-            HStack{
+            HStack {
                 Spacer()
                 ZStack {
-                    
+
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.blue)
                         .frame(width: 100, height: 100)
                     Text("Foobar")
                 }
+
                 ZStack {
-                    
+
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.blue)
                         .frame(width: 100, height: 100)
                     Text("Foobar")
                 }
-                
+
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.blue)
@@ -41,9 +42,9 @@ struct ContentView: View {
             HStack {
                 Spacer()
                     .frame(maxWidth: 100)
-                
+
                 Button("ABC") {
-                    
+
                 }
                 .frame(maxWidth: .infinity, minHeight: 40)
                 .background(Color.blue)
@@ -54,11 +55,9 @@ struct ContentView: View {
                     .frame(maxWidth: 100)
             }
 
-            
             Spacer()
         }
-        
-        
+
     }
 }
 
