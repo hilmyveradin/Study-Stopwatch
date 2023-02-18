@@ -56,6 +56,7 @@ struct StopwatchView: View {
 
                 Button(buttomText) {
                     if isTimeRunning {
+                        DataManager.shared.createDailyFocusSession(focusTime: counter.minutesInt16(), currentDate: Date())
                         buttomText = "Start"
                         resetTimer()
                     } else {

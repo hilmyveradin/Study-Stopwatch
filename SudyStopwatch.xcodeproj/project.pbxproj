@@ -14,8 +14,10 @@
 		014653C129A1234C00002498 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014653C029A1234C00002498 /* StopwatchView.swift */; };
 		014653C329A1235400002498 /* RecapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014653C229A1235400002498 /* RecapView.swift */; };
 		014653CA29A12D5100002498 /* Extensions+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014653C929A12D5100002498 /* Extensions+Date.swift */; };
-		014653CC29A12EDC00002498 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014653CB29A12EDC00002498 /* DataController.swift */; };
+		014653CC29A12EDC00002498 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014653CB29A12EDC00002498 /* DataManager.swift */; };
 		014653CF29A12EEF00002498 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 014653CD29A12EEF00002498 /* DataModel.xcdatamodeld */; };
+		014653D229A13DEC00002498 /* Extension+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014653D129A13DEC00002498 /* Extension+Int.swift */; };
+		014653D429A1407B00002498 /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014653D329A1407B00002498 /* Extension+Array.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,8 +29,10 @@
 		014653C029A1234C00002498 /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
 		014653C229A1235400002498 /* RecapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapView.swift; sourceTree = "<group>"; };
 		014653C929A12D5100002498 /* Extensions+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Date.swift"; sourceTree = "<group>"; };
-		014653CB29A12EDC00002498 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		014653CB29A12EDC00002498 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		014653CE29A12EEF00002498 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		014653D129A13DEC00002498 /* Extension+Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Int.swift"; sourceTree = "<group>"; };
+		014653D329A1407B00002498 /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				014653C929A12D5100002498 /* Extensions+Date.swift */,
+				014653D129A13DEC00002498 /* Extension+Int.swift */,
+				014653D329A1407B00002498 /* Extension+Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -108,7 +114,7 @@
 		014653D029A12EF200002498 /* DataPersistance */ = {
 			isa = PBXGroup;
 			children = (
-				014653CB29A12EDC00002498 /* DataController.swift */,
+				014653CB29A12EDC00002498 /* DataManager.swift */,
 				014653CD29A12EEF00002498 /* DataModel.xcdatamodeld */,
 			);
 			path = DataPersistance;
@@ -184,11 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				014653CC29A12EDC00002498 /* DataController.swift in Sources */,
+				014653CC29A12EDC00002498 /* DataManager.swift in Sources */,
+				014653D229A13DEC00002498 /* Extension+Int.swift in Sources */,
 				014653CF29A12EEF00002498 /* DataModel.xcdatamodeld in Sources */,
 				014653C329A1235400002498 /* RecapView.swift in Sources */,
 				014653B529A10C1D00002498 /* ContentView.swift in Sources */,
 				014653CA29A12D5100002498 /* Extensions+Date.swift in Sources */,
+				014653D429A1407B00002498 /* Extension+Array.swift in Sources */,
 				014653B329A10C1D00002498 /* SudyStopwatchApp.swift in Sources */,
 				014653C129A1234C00002498 /* StopwatchView.swift in Sources */,
 			);

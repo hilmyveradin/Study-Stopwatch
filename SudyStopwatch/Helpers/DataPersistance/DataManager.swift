@@ -7,8 +7,8 @@
 
 import CoreData
 
-class FocusSessionManager {
-    static let shared = FocusSessionManager()
+final class DataManager {
+    static let shared = DataManager()
 
     let persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "DataModel")
@@ -56,51 +56,63 @@ class FocusSessionManager {
     }
 
     // MARK: - Read
-    func fetchDailyFocusSessions() -> [DialyFocusSession] {
+    func fetchDailyFocusSessions() -> DialyFocusSession? {
         let context = persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<DialyFocusSession> = DialyFocusSession.fetchRequest()
         do {
             let results = try context.fetch(fetchRequest)
-            return results
+            guard let result = results[safe: 0] else {
+                return nil
+            }
+            return result
         } catch {
             print("Error fetching DailyFocusSession objects: \(error)")
-            return []
+            return nil
         }
     }
 
-    func fetchYesterdayFocusSessions() -> [YesterdayFocusSession] {
+    func fetchYesterdayFocusSessions() -> YesterdayFocusSession {
         let context = persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<YesterdayFocusSession> = YesterdayFocusSession.fetchRequest()
         do {
             let results = try context.fetch(fetchRequest)
-            return results
+            guard let result = results[safe: 0] else {
+                return YesterdayFocusSession()
+            }
+            return result
         } catch {
             print("Error fetching YesterdayFocusSession objects: \(error)")
-            return []
+            return YesterdayFocusSession()
         }
     }
 
-    func fetchWeeklyFocusSessions() -> [WeeklyFocusSession] {
+    func fetchWeeklyFocusSessions() -> WeeklyFocusSession {
         let context = persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<WeeklyFocusSession> = WeeklyFocusSession.fetchRequest()
         do {
             let results = try context.fetch(fetchRequest)
-            return results
+            guard let result = results[safe: 0] else {
+                return WeeklyFocusSession()
+            }
+            return result
         } catch {
             print("Error fetching WeeklyFocusSession objects: \(error)")
-            return []
+            return WeeklyFocusSession()
         }
     }
 
-    func fetchMonthlyStreakFocusSessions() -> [MonthlyStreakFocusSession] {
+    func fetchMonthlyStreakFocusSessions() -> MonthlyStreakFocusSession {
         let context = persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<MonthlyStreakFocusSession> = MonthlyStreakFocusSession.fetchRequest()
         do {
             let results = try context.fetch(fetchRequest)
-            return results
+            guard let result = results[safe: 0] else {
+                return MonthlyStreakFocusSession()
+            }
+            return result
         } catch {
             print("Error fetching MonthlyStreakFocusSession objects: \(error)")
-            return []
+            return MonthlyStreakFocusSession()
         }
     }
 

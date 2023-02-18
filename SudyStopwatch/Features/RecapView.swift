@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct RecapView: View {
+
+    @State private var dialyFocusTime: Int16 = 0
+
     var body: some View {
         VStack {
             // dialy focus time
             VStack {
                 Text("Your Dialy Focus Time")
-                Text("00 Minutes")
+                Text("\(dialyFocusTime) Minutes")
             }
             .padding(20)
             // yasterday focus time
@@ -43,6 +46,13 @@ struct RecapView: View {
             .padding(20)
             // all time dialy focus time
 
+        }
+        .onAppear {
+            guard let focusTime = DataManager.shared.fetchDailyFocusSessions()?.focusTime else {
+                return
+            }
+
+            dialyFocusTime = focusTime
         }
     }
 }
