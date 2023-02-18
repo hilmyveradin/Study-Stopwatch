@@ -9,7 +9,41 @@ import SwiftUI
 
 struct RecapView: View {
     var body: some View {
-        Text("FooBar")
+        VStack {
+            // dialy focus time
+            VStack {
+                Text("Your Dialy Focus Time")
+                Text("00 Minutes")
+            }
+            .padding(20)
+            // yasterday focus time
+            VStack {
+                Text("Yasterday Focus Time")
+                Text("00 Minutes")
+            }
+            .padding(20)
+            // weekly focus time
+            // monthly focus time
+            HStack {
+                VStack {
+                    Text("Weekly Focus Time")
+                    Text("00 Minutes")
+                }
+                Spacer()
+                VStack {
+                    Text("Monthly Focus Time")
+                    Text("00 Minutes")
+                }
+            }
+            .padding(20)
+            VStack {
+                Text("All time Focus Time")
+                Text("00 Minutes")
+            }
+            .padding(20)
+            // all time dialy focus time
+
+        }
     }
 }
 
