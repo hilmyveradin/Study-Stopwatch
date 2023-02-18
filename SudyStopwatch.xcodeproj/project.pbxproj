@@ -13,6 +13,9 @@
 		014653BA29A10C1F00002498 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 014653B929A10C1F00002498 /* Preview Assets.xcassets */; };
 		014653C129A1234C00002498 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014653C029A1234C00002498 /* StopwatchView.swift */; };
 		014653C329A1235400002498 /* RecapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014653C229A1235400002498 /* RecapView.swift */; };
+		014653CA29A12D5100002498 /* Extensions+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014653C929A12D5100002498 /* Extensions+Date.swift */; };
+		014653CC29A12EDC00002498 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014653CB29A12EDC00002498 /* DataController.swift */; };
+		014653CF29A12EEF00002498 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 014653CD29A12EEF00002498 /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		014653B929A10C1F00002498 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		014653C029A1234C00002498 /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
 		014653C229A1235400002498 /* RecapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecapView.swift; sourceTree = "<group>"; };
+		014653C929A12D5100002498 /* Extensions+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Date.swift"; sourceTree = "<group>"; };
+		014653CB29A12EDC00002498 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		014653CE29A12EEF00002498 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +63,9 @@
 			children = (
 				014653B229A10C1D00002498 /* SudyStopwatchApp.swift */,
 				014653B429A10C1D00002498 /* ContentView.swift */,
-				014653C029A1234C00002498 /* StopwatchView.swift */,
-				014653C229A1235400002498 /* RecapView.swift */,
+				014653C429A12B5400002498 /* Features */,
+				014653C529A12B6800002498 /* Helpers */,
+				014653C629A12B7400002498 /* Extensions */,
 				014653B629A10C1F00002498 /* Assets.xcassets */,
 				014653B829A10C1F00002498 /* Preview Content */,
 			);
@@ -71,6 +78,40 @@
 				014653B929A10C1F00002498 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		014653C429A12B5400002498 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				014653C029A1234C00002498 /* StopwatchView.swift */,
+				014653C229A1235400002498 /* RecapView.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		014653C529A12B6800002498 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				014653D029A12EF200002498 /* DataPersistance */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		014653C629A12B7400002498 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				014653C929A12D5100002498 /* Extensions+Date.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		014653D029A12EF200002498 /* DataPersistance */ = {
+			isa = PBXGroup;
+			children = (
+				014653CB29A12EDC00002498 /* DataController.swift */,
+				014653CD29A12EEF00002498 /* DataModel.xcdatamodeld */,
+			);
+			path = DataPersistance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014653CC29A12EDC00002498 /* DataController.swift in Sources */,
+				014653CF29A12EEF00002498 /* DataModel.xcdatamodeld in Sources */,
 				014653C329A1235400002498 /* RecapView.swift in Sources */,
 				014653B529A10C1D00002498 /* ContentView.swift in Sources */,
+				014653CA29A12D5100002498 /* Extensions+Date.swift in Sources */,
 				014653B329A10C1D00002498 /* SudyStopwatchApp.swift in Sources */,
 				014653C129A1234C00002498 /* StopwatchView.swift in Sources */,
 			);
@@ -283,6 +327,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +357,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,6 +393,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		014653CD29A12EEF00002498 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				014653CE29A12EEF00002498 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 014653CE29A12EEF00002498 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 014653A729A10C1D00002498 /* Project object */;
 }
