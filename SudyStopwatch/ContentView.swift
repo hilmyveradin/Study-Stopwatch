@@ -10,12 +10,55 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            Spacer()
+            HStack{
+                Spacer()
+                ZStack {
+                    
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.blue)
+                        .frame(width: 100, height: 100)
+                    Text("Foobar")
+                }
+                ZStack {
+                    
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.blue)
+                        .frame(width: 100, height: 100)
+                    Text("Foobar")
+                }
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.blue)
+                        .frame(width: 100, height: 100)
+                    Text("Foobar")
+                }
+                Spacer()
+            }
+            .padding(50)
+            HStack {
+                Spacer()
+                    .frame(maxWidth: 100)
+                
+                Button("ABC") {
+                    
+                }
+                .frame(maxWidth: .infinity, minHeight: 40)
+                .background(Color.blue)
+                .foregroundColor(Color.white)
+                .font(.headline)
+                .clipShape(Capsule())
+                Spacer()
+                    .frame(maxWidth: 100)
+            }
+
+            
+            Spacer()
         }
-        .padding()
+        
+        
     }
 }
 
